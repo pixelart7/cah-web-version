@@ -40,8 +40,7 @@ html, body {
       width: 100%;
       top: 30%;
       left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%); }
+      transform: translate(-50%, -50%); }
 
 .piles > .played-cards {
   margin-left: 64px; }
@@ -80,8 +79,7 @@ html, body {
       margin-right: 14px; }
     .hand-area > .card:hover {
       top: -20px;
-      -webkit-transition: top 1s;
-              transition: top 1s;
+      transition: top 1s;
       cursor: pointer; }
 
 .playing-area > .piles > .pile {
@@ -90,8 +88,7 @@ html, body {
   float: left;
   margin-left: 38px; }
   .playing-area > .piles > .pile--discard {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5); }
+    transform: scale(0.5); }
   .playing-area > .piles > .pile:first-child {
     margin-left: 0px; }
 
@@ -110,8 +107,7 @@ html, body {
     position: absolute;
     width: inherit;
     height: inherit;
-    -webkit-animation: animate__card-enter 0.5s 1 ease;
-            animation: animate__card-enter 0.5s 1 ease; }
+    animation: animate__card-enter 0.5s 1 ease; }
   .card--white {
     background-color: #ffffff;
     color: #222222; }
@@ -119,18 +115,10 @@ html, body {
     background-color: #222222;
     color: #ffffff; }
 
-@-webkit-keyframes animate__card-enter {
-  from {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5); }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1); } }
-
 @keyframes animate__card-enter {
   from {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5); }
+    transform: scale(1.5); }
   to {
-    -webkit-transform: scale(1);
-            transform: scale(1); } }
+    transform: scale(1); } }
+
+/*# sourceMappingURL=unprefixed-style.css.map */
