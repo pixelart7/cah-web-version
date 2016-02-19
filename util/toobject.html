@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>String to Object</title>
+    <script src="https://pix7.me/static/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#conv").click(function(){
+          var s = $("textarea").val();
+          var r = s.replace(/"/gm, '\\"').replace(/^/gm, '"').replace(/$/gm, '",').replace(/\/\//gm, "").replace(/\r?\n|\r/gm, "").replace(/_/gm, "____");
+          $("textarea").val(r);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <textarea style="width: 50%; height: 400px;"></textarea><br>
+    <input type="button" id="conv" value="Convert">
+  </body>
+</html>

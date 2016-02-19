@@ -1,0 +1,174 @@
+@import url(https://fonts.googleapis.com/css?family=Kanit&subset=thai,latin);
+
+html, body {
+  background-color: #eee;
+  height: 100%;
+  width: 100%;
+}
+
+.information {
+  padding: 28px;
+  box-sizing: border-box;
+  background-color: #000000;
+  color: white;
+}
+
+.col {
+  float: left;
+}
+
+.col--information {
+  width: 33.33%;
+}
+
+.col--cardpiles {
+  width: 66.64%;
+  float: right;
+  position: absolute;
+}
+
+.table {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.table > .information > .logo {
+  font-size: 48px;
+  font-family: "Kanit", "Arial", "Helvetica", "Tahoma", sans-serif;
+  line-height: 30px;
+}
+
+.table > .information > .logo > small {
+  font-size: 24px;
+}
+
+.table > .main-area {
+  width: 100%;
+  height: calc(100% - 125px);
+  float: left;
+  clear: right;
+  position: relative;
+}
+
+.table > .main-area > .playing-area {
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.piles > .played-cards {
+  margin-left: 64px;
+}
+
+.piles > .played-cards > .card {
+  width: 220px;
+  height: 300px;
+  float: left;
+  position: relative;
+}
+
+.piles > .played-cards > .card:hover {
+  z-index: 999;
+  bottom: 30px;
+}
+
+.piles > .played-cards > .card:not(:first-child) {
+  margin-left: -150px;
+}
+
+.hand-area {
+  width: 100%;
+  max-width: 9000px;
+  height: 220px;
+  padding-top: 30px;
+  position: absolute;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  bottom: 0;
+  text-align: center;
+}
+
+.hand-area::-webkit-scrollbar {
+  display: none;
+}
+
+.hand-area > .card {
+  vertical-align: top;
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  white-space: normal;
+  margin-left: 14px;
+}
+
+.hand-area > .card:last-child {
+  margin-right: 14px;
+}
+
+.hand-area > .card:hover {
+  top: -20px;
+  transition: top 1s;
+  cursor: pointer;
+}
+
+.playing-area > .piles {
+
+}
+
+.playing-area > .piles > .pile{
+  width: 220px;
+  height: 300px;
+  float: left;
+  margin-left: 38px;
+}
+
+.playing-area > .piles > .pile--discard{
+  transform: scale(0.5);
+}
+
+.playing-area > .piles > .pile:first-child{
+  margin-left: 0px;
+}
+
+.card {
+  width: 220px;
+  height: 300px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  padding: 16px;
+  padding-top: 30px;
+  box-sizing: border-box;
+  font-size: 26px;
+  line-height: 32px;
+  font-family: "Kanit", "Arial", "Helvetica", "Tahoma", sans-serif;
+}
+
+.card > .template {
+
+}
+
+.card--stack {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  -webkit-animation: animate__card-enter 0.5s 1 ease;
+}
+
+.card--white {
+  background-color: #ffffff;
+  color: #222222;
+}
+
+.card--black {
+  background-color: #222222;
+  color: #ffffff;
+}
+
+@-webkit-keyframes animate__card-enter {
+  from { -webkit-transform:  scale(1.5); }
+  to { -webkit-transform:  scale(1); }
+}
