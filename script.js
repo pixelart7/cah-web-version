@@ -1,11 +1,11 @@
 $(document).ready(function(){
-  for(var i = 0; i < 20; i++){
+  /*for(var i = 0; i < 20; i++){
 
     var card = Card;
     card.init("white", i);
     CAH.addDiscardCard(card);
 
-  }
+  }*/
   var card1 = Card;
   card1.init("black", 25);
   CAH.addQuestionCard(card1);

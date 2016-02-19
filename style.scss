@@ -78,7 +78,7 @@ html, body {
 	overflow-y: hidden;
 	bottom: 0;
 	text-align: center;
-	&::scrollbar {
+	&::-webkit-scrollbar {
 		display: none;
 	}
 	> .card {
